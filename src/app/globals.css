@@ -3,6 +3,59 @@
 @tailwind utilities;
 
 :root {
-	background-color: theme('colors.background');
-	color: theme('colors.foreground');
+	--background: var(--comp-bg);
+	--foreground: var(--color);
+}
+
+[data-theme='green'] {
+	--primary: theme('colors.cgreen.400');
+	--on-primary: theme('colors.cgreen.200');
+	--on-secondary: theme('colors.cgreen.300');
+	--secondary: theme('colors.cgreen.200');
+	--main-bg: theme('colors.cgreen.500');
+	--color: theme('colors.cgreen.100');
+}
+
+[data-theme='blue'] {
+	--primary: theme('colors.cblue.400');
+	--on-primary: theme('colors.cblue.200');
+	--on-secondary: theme('colors.cblue.300');
+	--secondary: theme('colors.cblue.200');
+	--main-bg: theme('colors.cblue.500');
+	--color: theme('colors.cblue.100');
+}
+
+[data-theme='red'] {
+	--primary: theme('colors.cred.400');
+	--on-primary: theme('colors.cred.200');
+	--secondary: theme('colors.cred.200');
+	--on-secondary: theme('colors.cred.300');
+	--main-bg: theme('colors.cred.500');
+	--color: theme('colors.cred.100');
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 14px;
+}
+p {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+a:hover {
+	color: theme('colors.cgreen.200');
 }
