@@ -10,7 +10,14 @@ const ThemeFixProvider = ({ children }: { children: ReactNode }) => {
 	if (!mounted) {
 		return null;
 	}
-	return <ThemeProvider themes={['green', 'blue']}>{children}</ThemeProvider>;
+	return (
+		<ThemeProvider
+			defaultTheme="green"
+			enableSystem={false}
+			themes={['green', 'blue']}>
+			{children}
+		</ThemeProvider>
+	);
 };
 
 export default ThemeFixProvider;
